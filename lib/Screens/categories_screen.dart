@@ -4,7 +4,7 @@ import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/models/dummy_dat
 import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/Widgets/category_item.dart';
 
 class Categories extends StatelessWidget {
-  static const categoryScreenRoute = '/';
+  static const routeName = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

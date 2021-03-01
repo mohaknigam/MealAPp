@@ -3,7 +3,7 @@ import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/models/dummy_dat
 import 'package:mealzz/Widgets/meal_item.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
-  static const categoryMealScreenRoute = '/category-meals';
+  static const routeName = '/category-meals';
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -22,6 +22,7 @@ class CategoryMealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
+              id: categoryMeals[index].id,
               affordability: categoryMeals[index].affordability,
               complexity: categoryMeals[index].complexity,
               title: categoryMeals[index].title,

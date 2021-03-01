@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mealzz/Screens/categories_screen.dart';
 import 'package:mealzz/Screens/category_meal_screen.dart';
+import 'package:mealzz/Screens/meal_detail_screen.dart';
+import 'package:mealzz/Widgets/meal_item.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,11 +28,11 @@ class MyApp extends StatelessWidget {
                 fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
-        initialRoute: Categories.categoryScreenRoute,
+        initialRoute: Categories.routeName,
         routes: {
-          Categories.categoryScreenRoute: (ctx) => Categories(),
-          CategoryMealsScreen.categoryMealScreenRoute: (ctx) =>
-              CategoryMealsScreen(),
+          Categories.routeName: (ctx) => Categories(),
+          CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+          MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
         });
   }
 }
