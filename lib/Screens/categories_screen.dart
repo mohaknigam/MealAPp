@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/models/dummy_data.dart';
 import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/Widgets/category_item.dart';
 
-class Categories extends StatelessWidget {
+class CategoriesScreen extends StatelessWidget {
   static const routeName = '/';
   @override
   Widget build(BuildContext context) {
