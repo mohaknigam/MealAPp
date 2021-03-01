@@ -1,7 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:mealzz/dummy_data.dart';
-import 'package:mealzz/category_item.dart';
+import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/models/dummy_data.dart';
+import 'file:///C:/Users/mohak/AndroidStudioProjects/mealzz/lib/Widgets/category_item.dart';
 
 class Categories extends StatelessWidget {
   static const categoryScreenRoute = '/';
