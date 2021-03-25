@@ -5,6 +5,8 @@ import 'package:mealzz/Screens/category_meal_screen.dart';
 import 'package:mealzz/Screens/meal_detail_screen.dart';
 import 'package:mealzz/Widgets/meal_item.dart';
 
+import 'Screens/tab_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -28,9 +30,9 @@ class MyApp extends StatelessWidget {
               fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
-      initialRoute: CategoriesScreen.routeName,
+      initialRoute: '/',
       routes: {
-        CategoriesScreen.routeName: (ctx) => CategoriesScreen(),
+        '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
