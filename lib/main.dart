@@ -4,7 +4,6 @@ import 'package:mealzz/Screens/categories_screen.dart';
 import 'package:mealzz/Screens/category_meal_screen.dart';
 import 'package:mealzz/Screens/filters_screen.dart';
 import 'package:mealzz/Screens/meal_detail_screen.dart';
-import 'package:mealzz/Widgets/meal_item.dart';
 
 import 'Screens/tab_screen.dart';
 

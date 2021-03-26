@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mealzz/Screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -46,14 +45,14 @@ class MainDrawer extends StatelessWidget {
             Icons.restaurant,
             context,
             () {
-              Navigator.pushNamed(
+              Navigator.pushReplacementNamed(
                 context,
                 '/',
               );
             },
           ),
-          buildListTile('Favourites', Icons.settings, context, () {
-            Navigator.pushNamed(context, FiltersScreen.routeName);
+          buildListTile('Filters', Icons.settings, context, () {
+            Navigator.pushReplacementNamed(context, FiltersScreen.routeName);
           }),
         ],
       ),
