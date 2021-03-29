@@ -22,21 +22,33 @@ class _MyAppState extends State<MyApp> {
     'lactose': false,
     'vegan': false,
     'vegetarian': false,
-  }
+  };
 
   List<Meal> _availableMeals = DUMMY_MEALS;
 
-  void _setFilters(Map<String,bool> filterData){
-      setState(() {
-        _filters = filterData;
+  void _setFilters(Map<String, bool> filterData) {
+    setState(() {
+      _filters = filterData;
 
-        _availableMeals = DUMMY_MEALS.where((element) {
-          if(_filters['gluten'] && !element.isGlutenFree){
-            return  false;
-          }
-        }).toList();
-      });
+      _availableMeals = DUMMY_MEALS.where((element) {
+        if (_filters['gluten'] && !element.isGlutenFree) {
+          return false;
+        }
+        if (_filters['lactose'] && !element.isLactoseFree) {
+          return false;
+        }
+        if (_filters['vegan'] && !element.isVegan) {
+          return false;
+        }
+        // ignore: missing_return
+        if (_filters['vegetarian'] && !element.isVegetarian) {
+          return false;
+        }
+        return true;
+      }).toList();
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,7 +72,8 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/': (ctx) => TabsScreen(),
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(_availableMeals),
+        CategoryMealsScreen.routeName: (ctx) =>
+            CategoryMealsScreen(_availableMeals),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
         FiltersScreen.routeName: (ctx) => FiltersScreen(_setFilters),
       },
