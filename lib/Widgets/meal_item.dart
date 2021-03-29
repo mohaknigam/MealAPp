@@ -4,7 +4,6 @@ import 'package:mealzz/models/meal.dart';
 
 class MealItem extends StatelessWidget {
   final String id;
-  final Function removeItem;
   final String title;
   final String imageUrl;
   final int duration;
@@ -18,7 +17,6 @@ class MealItem extends StatelessWidget {
     @required this.title,
     @required this.imageUrl,
     @required this.duration,
-    @required this.removeItem,
   });
 
   String get complexityText {
@@ -54,7 +52,7 @@ class MealItem extends StatelessWidget {
       arguments: id,
     ).then((value) {
       if (value != null) {
-        removeItem(value);
+        // removeItem(value);
       }
     });
   }
